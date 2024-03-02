@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+	<table class="table table-dark table-striped-columns">
+	<thead>
+	<tr>
+		<th>Cedula del Estudiante</th>
+		<th>Codigo de la Materia</th>
+		<th>Fecha de la matricula</th>
+		<th>Nombre del hilo</th>
+		
+	</tr>
+    </thead>
+    <tr th:each="DtoMatricula:${DtoMatricula}">
+		<td th:text="${DtoMatricula.cedula}"></td>
+		<td th:text="${DtoMatricula.codigo}"></td>
+		<td th:text="${DtoMatricula.fecha}"></td>
+		<td th:text="${DtoMatricula.nombre}"></td>
+		<td>	
+		</td>
+		
+	</tr>
+	</table>
+</body>
+</html>
